@@ -1,6 +1,6 @@
 
-  {
-      "name": "Responsive Farmer-Friendly Web App",
+{
+      "name": "responsive-farmer-friendly-web-app",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
