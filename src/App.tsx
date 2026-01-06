@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { Sun, Moon, HelpCircle, Home } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sun, Moon, CircleHelp, Home } from "lucide-react";
 import { Button } from "./components/ui/button";
 
 // Context Providers
@@ -137,7 +137,7 @@ function AppContent() {
               className="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
               size="icon"
             >
-              <HelpCircle size={24} />
+              <CircleHelp size={24} />
             </Button>
           </motion.div>
 

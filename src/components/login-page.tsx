@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { User, Lock, Sprout, Users, Shield, Eye, EyeOff, Globe } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
@@ -15,7 +15,7 @@ import {
 } from "./ui/select";
 
 interface LoginPageProps {
-  onLogin: (role: "farmer" | "admin" | "superadmin") => void;
+  onLogin: (role: "farmer" | "superadmin") => void;
 }
 
 export function LoginPage({ onLogin }: LoginPageProps) {

@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Wheat, MapPin, Droplets, Mountain, Sprout, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";

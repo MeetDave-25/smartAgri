@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Sprout, TrendingUp, Globe, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { AnimatedBackground } from "./animated-background";

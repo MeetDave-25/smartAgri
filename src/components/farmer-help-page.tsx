@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Mic, Send, HelpCircle, MessageCircle, X } from "lucide-react";
+import { Mic, Send, CircleHelp, MessageCircle, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { AnimatedBackground } from "./animated-background";
@@ -55,7 +55,7 @@ export function FarmerHelpPage({ onBack }: FarmerHelpPageProps) {
     // Simulate bot response
     setTimeout(() => {
       let botResponse = "";
-      
+
       if (text.toLowerCase().includes("water")) {
         botResponse = "Based on your crop and current weather, water your fields every 7-10 days. Next irrigation recommended in 5 days. With expected rainfall this week, you can skip one watering cycle! 💧";
       } else if (text.toLowerCase().includes("fertilizer")) {
@@ -173,11 +173,10 @@ export function FarmerHelpPage({ onBack }: FarmerHelpPageProps) {
                     className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <div
-                      className={`max-w-[80%] p-4 rounded-2xl ${
-                        message.sender === "user"
+                      className={`max-w-[80%] p-4 rounded-2xl ${message.sender === "user"
                           ? "bg-green-600 text-white rounded-br-none"
                           : "bg-gray-100 text-gray-800 rounded-bl-none"
-                      }`}
+                        }`}
                     >
                       {message.sender === "bot" && (
                         <div className="flex items-center gap-2 mb-2">
@@ -189,9 +188,8 @@ export function FarmerHelpPage({ onBack }: FarmerHelpPageProps) {
                         {message.text}
                       </p>
                       <div
-                        className={`text-xs mt-2 ${
-                          message.sender === "user" ? "text-green-100" : "text-gray-500"
-                        }`}
+                        className={`text-xs mt-2 ${message.sender === "user" ? "text-green-100" : "text-gray-500"
+                          }`}
                       >
                         {message.timestamp.toLocaleTimeString([], {
                           hour: "2-digit",
@@ -218,11 +216,10 @@ export function FarmerHelpPage({ onBack }: FarmerHelpPageProps) {
 
                 <Button
                   onClick={handleVoiceInput}
-                  className={`rounded-2xl px-4 ${
-                    isListening
+                  className={`rounded-2xl px-4 ${isListening
                       ? "bg-red-600 hover:bg-red-700"
                       : "bg-blue-600 hover:bg-blue-700"
-                  } text-white`}
+                    } text-white`}
                 >
                   {isListening ? (
                     <motion.div
@@ -250,7 +247,7 @@ export function FarmerHelpPage({ onBack }: FarmerHelpPageProps) {
                   <span>Type or speak</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <HelpCircle size={14} />
+                  <CircleHelp size={14} />
                   <span>Ask anything about farming</span>
                 </div>
               </div>
